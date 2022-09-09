@@ -25,25 +25,6 @@ app.listen(2000);
 
 //    app.get('/',async function(req,res){
 
-
-
-// // const userRepo = AppDataSource.getRepository(User);
-// //   //insert
-//   //  let user : User = new User();
-//   //  user.name = "Amit";
-//   //   user.email = "amit@email.com";
-//   //   user.name = "Amita";
-//   //   user.email = "amita@email.com";
-//   //   const userInserted = await userRepo.save(user);
-
-//   //   res.json(userInserted);
-
-// //     // find all records
-// //     const allRecords = await userRepo.find()
-
-
-// //     res.json(allRecords);
-
 // //    // delete a particular record
 // //     await userRepo.delete(2);
 // //     res.send("record deleted")
@@ -62,7 +43,6 @@ AppDataSource.initialize().then(() => {
 
 // const db = require('./queries')
 // const port = 3000
-
 
 // app.get('/', (request, response) => {
 //   response.json({ info: 'Node.js, Express, and Postgres API' })
