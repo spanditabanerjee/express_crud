@@ -1,0 +1,69 @@
+// import { ApolloServer } from 'apollo-server-express';
+// import {
+//   ApolloServerPluginDrainHttpServer,
+//   ApolloServerPluginLandingPageLocalDefault,
+// } from 'apollo-server-core';
+
+// import http from 'http';
+
+// async function startApolloServer(typeDefs, resolvers) {
+    //   const httpServer = http.createServer(app);
+
+//   const server = new ApolloServer({
+//     typeDefs,
+//     resolvers,
+//     csrfPrevention: true,
+//     cache: 'bounded',
+//     plugins: [
+//       ApolloServerPluginDrainHttpServer({ httpServer }),
+//       ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+//     ],
+//   });
+
+//   await server.start();
+//   server.applyMiddleware({
+//     app,
+
+
+//     path: '/'
+//   });
+
+
+//   await new Promise<void>(resolve => httpServer.listen({ port: 4000 }, resolve));
+//   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+// }
+// import { ApolloServer } from 'apollo-server-express';
+
+// import { buildSchema } from 'graphql';
+// import { TaskResolver } from './resolvers/task';
+// import {
+//     ApolloServerPluginDrainHttpServer,
+//     ApolloServerPluginLandingPageLocalDefault,
+//   } from 'apollo-server-core';
+//   const { typeDefs, resolvers} = require('./schema');
+
+//   async function startApolloServer(typeDefs, resolvers) {
+
+//     const app = express()
+//     const server = new ApolloServer({
+//         typeDefs,
+//         resolvers,
+//         plugins: [
+            
+//             ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+//           ],
+//         });
+
+
+
+//     await server.start()
+
+// // app.use(express.json());
+
+//     server.applyMiddleware({ app });
+    
+// app.get("/", (_req,res) => res.send("hello world"));
+// const port = 3000;
+// app.listen(port, () => console.log('Server started'))
+// };
+// main().catch((err) => console.error(err));
