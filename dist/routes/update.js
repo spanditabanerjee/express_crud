@@ -4,8 +4,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const app_1 = require("../app");
+const User_1 = require("../entities/User");
 const router = express_1.default.Router();
-router.get('/', (req, res) => {
-    res.send("hi");
+router.put("/:id", async (req, res) => {
+    const id = req.params.id;
+    const { name, email } = req.body;
+    const subUpdate = await app_1.AppDataSource.getRepository(User_1.User).update(id, { name, email });
+    // const users = await AppDataSource.getRepository(User).findOneBy(req.body)
+    // // AppDataSource.getRepository(User).merge(users, req.body)
+    // const results = await AppDataSource.getRepository(User).save(users)
+    return res.status(200).send(subUpdate);
 });
 exports.default = router;
